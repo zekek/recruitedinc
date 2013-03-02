@@ -1,4 +1,7 @@
 Recruitedinc::Application.routes.draw do
+  resources :colleges
+
+
   authenticated :user do
     root :to => 'home#index'
   end
