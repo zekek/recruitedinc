@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @college.name
+%p
+  %b Zip code:
+  = @college.zip_code
+%p
+  %b State:
+  = @college.state
+%p
+  %b Classification:
+  = @college.classification
+%p
+  %b School website:
+  = @college.school_website
+%p
+  %b Athletic website:
+  = @college.athletic_website
+
+= link_to 'Edit', edit_college_path(@college)
+\|
+= link_to 'Back', colleges_path

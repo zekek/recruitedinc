@@ -1,0 +1,13 @@
+= simple_form_for(@college) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :zip_code
+    = f.input :state
+    = f.input :classification
+    = f.input :school_website
+    = f.input :athletic_website
+
+  .form-actions
+    = f.button :submit

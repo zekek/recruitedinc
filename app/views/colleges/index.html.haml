@@ -1,0 +1,29 @@
+%h1 Listing colleges
+
+%table
+  %tr
+    %th Name
+    %th Zip code
+    %th State
+    %th Classification
+    %th School website
+    %th Athletic website
+    %th
+    %th
+    %th
+
+  - @colleges.each do |college|
+    %tr
+      %td= college.name
+      %td= college.zip_code
+      %td= college.state
+      %td= college.classification
+      %td= college.school_website
+      %td= college.athletic_website
+      %td= link_to 'Show', college
+      %td= link_to 'Edit', edit_college_path(college)
+      %td= link_to 'Destroy', college, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New College', new_college_path
