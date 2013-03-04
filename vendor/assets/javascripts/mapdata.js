@@ -1,6 +1,6 @@
 var main_settings={
 	//General settings
-	width: 750,
+	width: 875,
 	background_color: '#FFFFFF',	
 	background_transparent: 'no',
 	border_color: '#FFFFFF',
@@ -13,7 +13,7 @@ var main_settings={
 	state_description:   'State description',
 	state_color: '#88A4BC',
 	state_hover_color: '#3B729F',
-	state_url: '',
+	state_url: '/colleges',
 	all_states_inactive: 'no',
 	
 	//Location defaults
@@ -38,7 +38,7 @@ HI: {
 		description: 'default',
 		color: 'default',
 		hover_color: 'default',
-		url: 'http://www.google.com'
+		url: 'default'
 		},
 	FL: {
 		name: 'Florida',

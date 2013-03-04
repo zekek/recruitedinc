@@ -16,3 +16,4 @@
 //= require_tree .
 //= require mapdata
 //= require usmap
+$(document).foundation();

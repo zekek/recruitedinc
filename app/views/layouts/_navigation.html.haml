@@ -1,17 +1,23 @@
-= link_to "Recruitedinc", root_path, :class => 'brand'
-%ul.nav-bar
-  - if user_signed_in?
-    %li
-      = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-  - else
-    %li
-      = link_to 'Login', new_user_session_path
-  - if user_signed_in?
-    %li
-      = link_to 'Edit account', edit_user_registration_path
-    - if current_user.has_role? :admin
-      %li
-        = link_to 'Admin', users_path
-  - else
-    %li
-      = link_to 'Sign up', new_user_registration_path
+/ Header and Nav
+.row
+  .large-3.columns
+    %h1
+      %img{:src => "http://placehold.it/400x100&text=Logo"}/
+  .large-9.columns
+    %ul.button-group.right
+      - if user_signed_in?
+        %li
+          %a.button{:href => "#{edit_user_registration_path}"} Edit account
+        - if current_user.has_role? :admin
+          %li
+            %a.button{:href => "#{users_path}"} Admin
+      - else
+        %li
+          %a.button{:href => "#{new_user_registration_path}"} Sign up
+      - if user_signed_in?
+        %li
+          %a.button{:href => "#{destroy_user_session_path}", :data => {:method => 'delete'}} Logout
+      - else
+        %li
+          %a.button{:href => "#{new_user_session_path}"} Login
+/ End Header and Nav

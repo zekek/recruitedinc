@@ -121,10 +121,6 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.21)
-    modular-scale (1.0.6)
-      compass (>= 0.12.1)
-      sass (>= 3.2.0)
-      sassy-math (>= 1.5)
     multi_json (1.6.1)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
@@ -175,8 +171,6 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    sassy-math (1.5)
-      compass (~> 0.11)
     selenium-webdriver (2.30.0)
       childprocess (>= 0.2.5)
       multi_json (~> 1.0)
@@ -208,9 +202,7 @@ GEM
     websocket (1.0.7)
     xpath (1.0.0)
       nokogiri (~> 1.3)
-    zurb-foundation (3.2.5)
-      compass (>= 0.12.2)
-      modular-scale (= 1.0.6)
+    zurb-foundation (4.0.3)
       rake
       sass (>= 3.2.0)
 
@@ -242,4 +234,4 @@ DEPENDENCIES
   sendgrid (>= 1.0.1)
   simple_form
   uglifier (>= 1.0.3)
-  zurb-foundation (>= 3.2.5)
+  zurb-foundation (~> 4.0.0)

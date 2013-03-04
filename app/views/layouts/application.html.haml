@@ -22,14 +22,45 @@
 
   -# Included JS Files
   = javascript_include_tag "application"
+  = javascript_include_tag "vendor/custom.modernizr"
 
   = csrf_meta_tag
 
 %body
-  #container.container
-    %header
-      = render 'layouts/navigation'
-      = render 'layouts/messages'
-    #main{:role => "main"}
+  = render 'layouts/navigation'
+  .row
+    .large-12.columns
       = yield
-    %footer
+  / Call to Action Panel
+  .row
+    .large-12.columns
+      .panel
+        %h4 Get in touch!
+        .row
+          .large-9.columns
+            %p We'd love to hear from you, you attractive person you.
+          .large-3.columns
+            %a.radius.button.right{:href => "#"} Contact Us
+  / Footer
+  %footer.row
+    .large-12.columns
+      %hr/
+      .row
+        .large-6.columns
+          %p © Copyright no one at all. Go to town.
+        .large-6.columns
+          %ul.inline-list.right
+            %li
+              %a{:href => "#"} Link 1
+            %li
+              %a{:href => "#"} Link 2
+            %li
+              %a{:href => "#"} Link 3
+            %li
+              %a{:href => "#"} Link 4
+            %li
+              %a{:href => "#"} Link 5
+            %li
+              %a{:href => "#"} Link 6
+            %li
+              %a{:href => "#"} Link 7

@@ -1,13 +1,1 @@
-.row
-  .eight.columns
-    #map
-  .four.columns
-    %p.right
-      - if user_signed_in?
-        = link_to 'Logout', destroy_user_session_path, :method=>'delete'
-      - else
-        = link_to 'Login', new_user_session_path
-      - if user_signed_in?
-        = link_to 'Edit account', edit_user_registration_path
-      - else
-        = link_to 'Sign up', new_user_registration_path, {class: "small blue nice radius button"}
+#map

@@ -1,17 +1,17 @@
-%h1 Listing colleges
+%h3 Colleges
 
 %table
-  %tr
-    %th Name
-    %th Zip code
-    %th State
-    %th Classification
-    %th School website
-    %th Athletic website
-    %th
-    %th
-    %th
-
+  %thead
+    %tr
+      %th Name
+      %th Zip code
+      %th State
+      %th Classification
+      %th School website
+      %th Athletic website
+      %th
+      %th
+      %th
   - @colleges.each do |college|
     %tr
       %td= college.name
