@@ -1,5 +1,6 @@
 %h3 Colleges
-
+- if can? :update, @college
+  = link_to 'New College', new_college_path
 %table
   %thead
     %tr
@@ -9,21 +10,17 @@
       %th Classification
       %th School website
       %th Athletic website
-      %th
-      %th
-      %th
+      - if can? :update, @college
+        %th
+        %th
   - @colleges.each do |college|
     %tr
-      %td= college.name
+      %td= link_to college.name, college
       %td= college.zip_code
       %td= college.state
       %td= college.classification
-      %td= college.school_website
-      %td= college.athletic_website
-      %td= link_to 'Show', college
-      %td= link_to 'Edit', edit_college_path(college)
-      %td= link_to 'Destroy', college, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New College', new_college_path
+      %td= link_to 'View Site', college.school_website, class: 'button', target: 'blank'
+      %td= link_to 'View Site', college.athletic_website, class: 'button', target: 'blank'
+      - if can? :update, @college
+        %td= link_to 'Edit', edit_college_path(college), class: 'button'
+        %td= link_to 'Destroy', college, class: 'button', method: :delete, data: { :confirm => 'Are you sure?' }

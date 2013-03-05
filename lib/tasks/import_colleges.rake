@@ -5,7 +5,7 @@ task :import_colleges => [:environment] do
 
   College.delete_all
 
-  file = "doc/div1.txt"
+  file = "doc/div2.txt"
 
   CSV.foreach(file, :headers => true) do |row|
     College.create ({

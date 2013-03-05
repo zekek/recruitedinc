@@ -29,6 +29,7 @@
 %body
   = render 'layouts/navigation'
   .row
+    = render 'layouts/messages'
     .large-12.columns
       = yield
   / Call to Action Panel
@@ -38,7 +39,7 @@
         %h4 Get in touch!
         .row
           .large-9.columns
-            %p We'd love to hear from you, you attractive person you.
+            %p We'd love to hear from you, you crazy person you.
           .large-3.columns
             %a.radius.button.right{:href => "#"} Contact Us
   / Footer

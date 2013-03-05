@@ -2,7 +2,8 @@ class CollegesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @colleges = College.all
+    @colleges = College.by_state(params[:state]) if params[:state].present?
+    @colleges ||= College.all
   end
 
   def show
